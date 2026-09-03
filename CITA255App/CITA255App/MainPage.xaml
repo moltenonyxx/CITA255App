@@ -2,42 +2,75 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CITA255App.MainPage">
-    
+     
     <VerticalStackLayout Padding="50" Spacing="20">
         <Image Source="realjohncena.jfif"
-               WidthRequest="150"
-               HeightRequest="150"
+               WidthRequest="100"
+               HeightRequest="100"
                />
 
         <Label Text="Everett Rivenburg" 
-               FontSize="60"  
+               x:Name="nameText"
+               FontSize="40"  
                TextColor="Maroon"
                HorizontalTextAlignment="Center"
                FontFamily="MonaXenonBold"
                />
         <Label Text="I enjoy playing video games and listening to music" 
-               FontSize="40" 
+               FontSize="20" 
                TextColor="Blue" 
                BackgroundColor="Red"
                HorizontalTextAlignment="Center"
                />
         <Label Text="My cats name is muenster, like the cheese" 
-               FontSize="40" 
+               FontSize="20" 
                TextColor="BlanchedAlmond"
                BackgroundColor="LightCoral"
                HorizontalTextAlignment="Center"/>
 
-
-        <Entry Placeholder="'the complaint box'" 
+        <!--entry means text box-->
+        <Entry x:Name="compBox"
+               Placeholder="'the complaint box'"
                PlaceholderColor="Maroon"
                WidthRequest="500"
-        />
-        <Button Text="DO NOT TOUCH THE BIG RED BUTTON"
+        /> <!--when creating a clickable button do NOT forget (object sender, EventArgs e)-->
+        <Button x:Name="BigRedButton"
+                Text="DO NOT TOUCH THE BIG RED BUTTON"
+                Clicked="onButtonClicked"
                 BackgroundColor="Red"
                 TextColor="Black"
                 WidthRequest="280"
                 BorderColor="Black"
         />
+
+    
+        <Label Text="The F - C Calculator!"
+               FontSize="35"
+               TextColor="Blue"
+               HorizontalTextAlignment="Center"
+        />
+        <Label Text=""
+               x:Name="resultLabel"
+               FontSize="20"
+               FontFamily="MonaXenonBold"
+               HorizontalTextAlignment="Center"
+               TextColor="Blue"
+        />
+        <Entry x:Name="CelsBox"
+               Placeholder="Enter your Celsius temp here.."
+               WidthRequest="250"
+        />
+        <Button x:Name="CalcButton"
+                Text="Calculate!"
+                Background="CadetBlue"
+                TextColor="White"
+                WidthRequest="100"
+                BorderColor="Black"
+                BorderWidth="1"
+                Clicked="cels"
+        />
+
+
 
     </VerticalStackLayout>
 
