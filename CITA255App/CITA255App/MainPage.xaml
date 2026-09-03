@@ -2,35 +2,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CITA255App.MainPage">
+    
+    <VerticalStackLayout Padding="50" Spacing="20">
+        <Image Source="realjohncena.jfif"
+               WidthRequest="150"
+               HeightRequest="150"
+               />
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a submarine number ten" />
+        <Label Text="Everett Rivenburg" 
+               FontSize="60"  
+               TextColor="Maroon"
+               HorizontalTextAlignment="Center"
+               FontFamily="MonaXenonBold"
+               />
+        <Label Text="I enjoy playing video games and listening to music" 
+               FontSize="40" 
+               TextColor="Blue" 
+               BackgroundColor="Red"
+               HorizontalTextAlignment="Center"
+               />
+        <Label Text="My cats name is muenster, like the cheese" 
+               FontSize="40" 
+               TextColor="BlanchedAlmond"
+               BackgroundColor="LightCoral"
+               HorizontalTextAlignment="Center"/>
 
-            <Label
-                Text="I got it to work!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
-                Text="..no seriously i got it to work"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+        <Entry Placeholder="'the complaint box'" 
+               PlaceholderColor="Maroon"
+               WidthRequest="500"
+        />
+        <Button Text="DO NOT TOUCH THE BIG RED BUTTON"
+                BackgroundColor="Red"
+                TextColor="Black"
+                WidthRequest="280"
+                BorderColor="Black"
+        />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me and find out" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>

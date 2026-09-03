@@ -13,6 +13,9 @@ namespace CITA255App
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("MonaspaceXenonNF-Medium.otf", "MonaXenonMed");
+                    fonts.AddFont("MonaspaceXenonNF-Bold.otf", "MonaXenonBold");
+
                 });
 
 #if DEBUG
