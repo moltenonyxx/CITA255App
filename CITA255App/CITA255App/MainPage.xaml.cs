@@ -18,9 +18,9 @@
 
         private void cels(object sender, EventArgs e)
         {
-            float celsEntry = float.Parse(CelsBox.Text);
-            float Celsius = celsEntry * 5.0f / 9.0f;
-            resultLabel.Text = $"Your temp in Celsius is:{celsEntry} °";
+            float celcEntry = float.Parse(CelsBox.Text);
+            float Celcius = celcEntry * 5.0f / 9.0f;
+            resultLabel.Text = $"Your temp in Celsius is: {Celcius :N1}°";
 
 
         }

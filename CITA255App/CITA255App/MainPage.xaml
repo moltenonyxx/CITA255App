@@ -57,7 +57,7 @@
                TextColor="Blue"
         />
         <Entry x:Name="CelsBox"
-               Placeholder="Enter your Celsius temp here.."
+               Placeholder="Enter your fahrenheit temp here.."
                WidthRequest="250"
         />
         <Button x:Name="CalcButton"
