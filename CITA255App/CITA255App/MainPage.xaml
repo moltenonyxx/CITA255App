@@ -21,12 +21,15 @@
                TextColor="Blue" 
                BackgroundColor="Red"
                HorizontalTextAlignment="Center"
+               WidthRequest="500"
                />
         <Label Text="My cats name is muenster, like the cheese" 
                FontSize="20" 
                TextColor="BlanchedAlmond"
                BackgroundColor="LightCoral"
-               HorizontalTextAlignment="Center"/>
+               HorizontalTextAlignment="Center"
+               WidthRequest="500"
+               />
 
         <!--entry means text box-->
         <Entry x:Name="compBox"
@@ -35,7 +38,7 @@
                WidthRequest="500"
         /> <!--when creating a clickable button do NOT forget (object sender, EventArgs e)-->
         <Button x:Name="BigRedButton"
-                Text="DO NOT TOUCH THE BIG RED BUTTON"
+                Text="'submit' your complaint"
                 Clicked="onButtonClicked"
                 BackgroundColor="Red"
                 TextColor="Black"
