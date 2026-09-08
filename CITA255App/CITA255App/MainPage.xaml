@@ -8,7 +8,7 @@
                WidthRequest="100"
                HeightRequest="100"
                />
-
+        
         <Label Text="Everett Rivenburg" 
                x:Name="nameText"
                FontSize="40"  
@@ -30,13 +30,13 @@
                HorizontalTextAlignment="Center"
                WidthRequest="500"
                />
-
-        <!--entry means text box-->
+        
+        
         <Entry x:Name="compBox"
                Placeholder="'the complaint box'"
                PlaceholderColor="Maroon"
                WidthRequest="500"
-        /> <!--when creating a clickable button do NOT forget (object sender, EventArgs e)-->
+        /> 
         <Button x:Name="BigRedButton"
                 Text="'submit' your complaint"
                 Clicked="onButtonClicked"
@@ -45,7 +45,7 @@
                 WidthRequest="280"
                 BorderColor="Black"
         />
-
+            
     
         <Label Text="The F - C Calculator!"
                FontSize="35"
@@ -72,9 +72,28 @@
                 BorderWidth="1"
                 Clicked="cels"
         />
+        <!---->
+        <Label  Text=""
+                x:Name="resultLabelfar"
+                FontSize="20"
+                FontFamily="MonaXenonBold"
+                HorizontalTextAlignment="Center"
+                TextColor="Red"
+        />
+        <Entry x:Name="farBox"
+               Placeholder="Enter your Celsius temp here.."
+               WidthRequest="250"
 
-
-
+        />
+        <Button x:Name="FarButton"
+                Text="Calculate!"
+                Background="DarkSalmon"
+                TextColor="White"
+                WidthRequest="100"
+                BorderColor="Black"
+                BorderWidth="1"
+                Clicked="far"
+        />
     </VerticalStackLayout>
 
 </ContentPage>
