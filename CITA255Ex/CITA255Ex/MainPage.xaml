@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CITA255Ex.MainPage">
+
+<ScrollView>
+    <VerticalStackLayout>
+            <Border Stroke="Black" 
+                    StrokeThickness="10" 
+                    WidthRequest="550" 
+                    HeightRequest="300"
+            >
+                <Grid ColumnDefinitions="auto, auto" 
+                  RowDefinitions="auto, auto" 
+                  ColumnSpacing="10"
+                  Padding="10"
+                  
+                >
+                    <Border Grid.Row="0" 
+                            Grid.Column="0" 
+                            Stroke="Black" 
+                            StrokeThickness="2"
+                            WidthRequest="250"
+                            HeightRequest="125"
+                    >
+                        <Image Source="profpic.jpg"></Image>
+                    </Border>
+
+                    <Border Grid.Row="0" 
+                            Grid.Column="1" 
+                            Stroke="Black" 
+                            StrokeThickness="2"
+                            WidthRequest="250"
+                            HeightRequest="125"
+                            
+                    >
+                        <VerticalStackLayout 
+                            VerticalOptions="Center"
+                        >
+                            <Label Text="AAAAAAAAAAAAAAAA" FontFamily="OpenSansSemiBold"></Label>
+                            <Label Text="BBBBBBBBBBBBBBBB"></Label>
+                            <Label Text="CCCCCCCCCCCCCCCC"></Label>
+                        </VerticalStackLayout>
+                    </Border>
+
+
+
+
+
+                </Grid>
+            </Border>
+    </VerticalStackLayout>
+</ScrollView>
+
+</ContentPage>
