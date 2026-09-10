@@ -37,7 +37,7 @@
                         <VerticalStackLayout 
                             VerticalOptions="Center"
                         >
-                            <Label Text="AAAAAAAAAAAAAAAA" FontFamily="OpenSansSemiBold"></Label>
+                            <Label Text="AAAAAAAAAAAAAAAA"></Label>
                             <Label Text="BBBBBBBBBBBBBBBB"></Label>
                             <Label Text="CCCCCCCCCCCCCCCC"></Label>
                         </VerticalStackLayout>
