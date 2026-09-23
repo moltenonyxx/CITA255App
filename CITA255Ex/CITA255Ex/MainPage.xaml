@@ -49,7 +49,19 @@
 
                 </Grid>
             </Border>
-    </VerticalStackLayout>
+            
+            <CollectionView x:Name="snackList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Label Text="{Binding .}" FontSize="18" Padding="30"/>
+                        
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
 </ScrollView>
 
 </ContentPage>

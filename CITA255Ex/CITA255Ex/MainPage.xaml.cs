@@ -1,12 +1,24 @@
-﻿namespace CITA255Ex
+﻿using System.Diagnostics;
+
+namespace CITA255Ex
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
+            List<string> snacks = new List<string>
+            {
+                "Apples", "Oranges", "Lemon"
+            };
+
+            foreach (string snack in snacks)
+            {
+                Debug.WriteLine(snack);
+            }
             InitializeComponent();
+            snackList.ItemsSource = snacks;
+            
         }
 
 
