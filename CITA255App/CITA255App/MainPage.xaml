@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CITA255App.MainPage">
      
-    <VerticalStackLayout Padding="50" Spacing="20">
+    <VerticalStackLayout 
+        Padding="50" 
+        Spacing="20"
+        
+    >
         <Image Source="realjohncena.jfif"
                WidthRequest="100"
                HeightRequest="100"
