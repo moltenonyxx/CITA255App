@@ -8,7 +8,7 @@
             <Border Stroke="Black" 
                     StrokeThickness="10" 
                     WidthRequest="550" 
-                    HeightRequest="300"
+                    HeightRequest="500"
             >
                 <Grid ColumnDefinitions="auto, auto" 
                   RowDefinitions="auto, auto" 
@@ -16,33 +16,80 @@
                   Padding="10"
                   
                 >
-                    <Border Grid.Row="0" 
-                            Grid.Column="0" 
-                            Stroke="Black" 
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Stroke="Black"
                             StrokeThickness="2"
-                            WidthRequest="250"
-                            HeightRequest="125"
+                            HeightRequest="50"
                     >
-                        <Image Source="profpic.jpg"></Image>
+                        <Label Text="Games"
+                               FontSize="30"
+                               HorizontalTextAlignment="Center"
+                        />
+                        
                     </Border>
-
-                    <Border Grid.Row="0" 
-                            Grid.Column="1" 
-                            Stroke="Black" 
+                    <Border Grid.Row="1" 
+                            Grid.Column="0" 
+                            Stroke="White"
                             StrokeThickness="2"
                             WidthRequest="250"
-                            HeightRequest="125"
                             
                     >
                         <VerticalStackLayout 
-                            VerticalOptions="Center"
+                            
                         >
-                            <Label Text="AAAAAAAAAAAAAAAA"></Label>
-                            <Label Text="BBBBBBBBBBBBBBBB"></Label>
-                            <Label Text="CCCCCCCCCCCCCCCC"></Label>
+                            <CollectionView x:Name="gamesList">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Label Text="{Binding .}" FontSize="18" Padding="5"/>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
                         </VerticalStackLayout>
                     </Border>
+                    <Border Grid.Row="0"
+                            Grid.Column="1"
+                            Stroke="Black"
+                            StrokeThickness="2"
+                            HeightRequest="50"
+                            WidthRequest="250"
+                    >
+                        <Label Text="Hours"
+                               FontSize="30"
+                               HorizontalTextAlignment="Center"
+                        />
+                    </Border>
 
+                    <Border Grid.Row="1" 
+                            Grid.Column="1" 
+                            Stroke="White" 
+                            StrokeThickness="2"
+                            WidthRequest="150"
+                            
+                            
+                    >
+                        <VerticalStackLayout 
+                            
+                        >
+                            <CollectionView x:Name="timeList">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Label Text="{Binding .}" 
+                                               FontSize="18" 
+                                               Padding="5" 
+                                               HorizontalTextAlignment="End"
+                                               
+                                        />
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>
+                    </Border>
+                    
 
 
 
@@ -50,16 +97,7 @@
                 </Grid>
             </Border>
             
-            <CollectionView x:Name="snackList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
 
-                        <Label Text="{Binding .}" FontSize="18" Padding="30"/>
-                        
-
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
 
         </VerticalStackLayout>
 </ScrollView>

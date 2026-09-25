@@ -7,17 +7,22 @@ namespace CITA255Ex
 
         public MainPage()
         {
-            List<string> snacks = new List<string>
+            List<string> games = new List<string>
             {
-                "Apples", "Oranges", "Lemon"
+                "Marvel Rivals", "Valheim", "Monster Hunter", "Schedule 1", "Minecraft", "Mortal Kombat", "Darktide", "Slay the Spire 2", "BTD6", "Pokemon"
             };
 
-            foreach (string snack in snacks)
+            foreach (string gamesList in games)
             {
-                Debug.WriteLine(snack);
+                Debug.WriteLine(gamesList);
             }
+            List<Double> time = new List<double>
+            {
+                2, 4, 3, 4, 2, 1, 2, 1, 1, 3
+            };
             InitializeComponent();
-            snackList.ItemsSource = snacks;
+            gamesList.ItemsSource = games;
+            timeList.ItemsSource = time;
             
         }
 
