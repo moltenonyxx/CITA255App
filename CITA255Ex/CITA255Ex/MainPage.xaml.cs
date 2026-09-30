@@ -1,18 +1,15 @@
-﻿using System.Diagnostics;
+﻿using System.Collections;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace CITA255Ex
 {
     public partial class MainPage : ContentPage
     {
         double totalGames = 0.0;
-        double totalTime;
-        private void onTotalClicked(object sender, EventArgs e)
-        {
-            //foreach (double time in timeList)
-            {
+        double totalTime = 0.0;
+        
 
-            }
-        }
         public MainPage()
         {
             List<string> games = new List<string>
@@ -26,14 +23,22 @@ namespace CITA255Ex
             }
             List<double> time = new List<double>
             {
-                2, 4, 3, 4, 2, 1, 2, 1, 1, 3
+                2.5, 4.0, 3.0, 4.5, 2.75, 1.5, 2, 1.25, 1, 3.25
             };
             InitializeComponent();
             gamesList.ItemsSource = games;
             timeList.ItemsSource = time;
+            
+        }
+        private void onTotalClicked(object sender, EventArgs e)
+        {
+            //foreach (double time in timeList)
+            {
+                
+            }
         }
 
-       }   
+    }   
         
 
     }
