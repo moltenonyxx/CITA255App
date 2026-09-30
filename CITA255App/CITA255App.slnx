@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/" />
   <Project Path="CITA255App/CITA255App.csproj" />
+  <Project Path="CITA255page2/CITA255page2.csproj" Id="7022cd08-38e1-4ba4-a318-76905a0516b8">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

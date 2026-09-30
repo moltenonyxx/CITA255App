@@ -4,7 +4,15 @@ namespace CITA255Ex
 {
     public partial class MainPage : ContentPage
     {
+        double totalGames = 0.0;
+        double totalTime;
+        private void onTotalClicked(object sender, EventArgs e)
+        {
+            //foreach (double time in timeList)
+            {
 
+            }
+        }
         public MainPage()
         {
             List<string> games = new List<string>
@@ -16,16 +24,16 @@ namespace CITA255Ex
             {
                 Debug.WriteLine(gamesList);
             }
-            List<Double> time = new List<double>
+            List<double> time = new List<double>
             {
                 2, 4, 3, 4, 2, 1, 2, 1, 1, 3
             };
             InitializeComponent();
             gamesList.ItemsSource = games;
             timeList.ItemsSource = time;
-            
         }
 
+       }   
+        
 
     }
-}
