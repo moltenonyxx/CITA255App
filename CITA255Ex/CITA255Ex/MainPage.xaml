@@ -9,6 +9,7 @@
                     StrokeThickness="10" 
                     WidthRequest="300" 
                     HeightRequest="550"
+                    
             >
                 <Grid RowDefinitions = "auto, auto, auto, auto"
                       ColumnDefinitions="auto, auto, auto, auto"
@@ -85,22 +86,13 @@
 
                     </Button>
 
-                    <Label Text="game"
-                           x:Name="gameTotal"
-                           FontSize="20"
-                           Grid.Row="3"
-                           Grid.Column="0"
-                           HorizontalTextAlignment="Center"
-                    >
 
-                    </Label>
 
                     <Label Text="time"
                            x:Name="timeTotal"
                            FontSize="20"
                            Grid.Row="3"
-                           Grid.Column="1"
-                           HorizontalTextAlignment="Center"
+                           Grid.Column="0"
 
                            
                     >
