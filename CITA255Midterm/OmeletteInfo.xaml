@@ -4,9 +4,75 @@
              x:Class="CITA255Midterm.OmeletteInfo"
              Title="OmeletteInfo">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid 
+            RowDefinitions="Auto, Auto, auto, auto, auto"
+            ColumnDefinitions="Auto, auto, auto"
+            Padding="10"
+            RowSpacing="5"
+            
+            >
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Source="omelette.webp"
+                HeightRequest="150"
+                />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Omelette"
+                FontSize="Header"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" 
+            />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="$7.99 + 1.00 per extra fillings"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="20"
+                TextColor="Gray"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Fluffy eggs folded around your choice of cheese and fillings 
+                come with a side of vegetables"
+                WidthRequest="200"
+                TextColor="Gray"
+                FontAttributes="Italic"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="In Stock"
+                WidthRequest="200"
+                TextColor="Green"
+                FontAttributes="Italic,Bold"
+                
+            />
+            <Entry
+                Grid.Row="3"
+                Grid.Column="0"
+                x:Name="omeletteAmount"
+                Placeholder="Enter how much you want.."
+            />
+            <Label
+                Grid.Row="3"
+                Grid.Column="2"
+                x:Name="omeletteResult"
+                Text=""
+                TextColor="Green"
+            />
+            <Button
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Back to Menu"
+                WidthRequest="250"
+                Clicked="OnBackClicked"
+            />
+
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
