@@ -20,7 +20,7 @@ public partial class OmeletteInfo : ContentPage
         try 
         {
             string.IsNullOrWhiteSpace(omeletteAmount.Text);
-            if (double.TryParse(omeletteAmount.Text, out double omeletteNumber))
+            if (double.TryParse(omeletteAmount.Text, out double omeletteNumber) & omeletteNumber > 0)
             {
                 omeletteResult.Text = $"Added {omeletteNumber} Omelette to cart";
             }

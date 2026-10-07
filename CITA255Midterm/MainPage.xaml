@@ -15,10 +15,7 @@
 
                     <DataTemplate>
                         <Label Text="{Binding .}" 
-                               FontSize="55" 
-                               Padding="10" 
-                               TextColor="Gold"
-                               FontAttributes="Bold"
+                               Style="{StaticResource shopItems}"
                                />
                     </DataTemplate>
                 

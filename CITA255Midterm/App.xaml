@@ -10,13 +10,13 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
                 
             </ResourceDictionary.MergedDictionaries>
-            <!--
+            
             <Style TargetType="Label" x:Key="shopItems">
                 <Setter Property="FontSize" Value="55"></Setter>
                 <Setter Property="TextColor" Value="Gold"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
-            -->
+            
             <Style TargetType="Label" x:Key="breakTitle">
                 <Setter Property="FontSize" Value="Header"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
