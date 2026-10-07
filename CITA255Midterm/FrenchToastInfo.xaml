@@ -2,11 +2,74 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CITA255Midterm.FrenchToastInfo"
-             Title="FrenchToastInfo">
+             Title="">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid 
+            RowDefinitions="Auto, Auto, auto, auto, auto"
+            ColumnDefinitions="Auto, auto, auto"
+            Padding="10"
+            RowSpacing="5"
+            >
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Source="frenchtoast.jpg"
+                HeightRequest="150"
+            />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="French Toast"
+                Style="{StaticResource breakTitle}" 
+            />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="$5.99"
+                Style="{StaticResource breakPrice}"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Thick texas toast breaded in egg and milk, non dairy, cinnamon, and toppings optional"
+                Style="{StaticResource breakDesc}"
+                MinimumWidthRequest="250"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="In Stock"
+                Style="{StaticResource inStock}"
+            />
+            <Entry
+                Grid.Row="3"
+                Grid.Column="0"
+                x:Name="toastAmount"
+                Placeholder="Enter how much you want.."
+                MaximumWidthRequest="250"
+            />
+            <Button 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Add to Cart"
+                Clicked="toastCart"
+                WidthRequest="250"
+            />
+            <Label
+                Grid.Row="4"
+                Grid.Column="1"
+                x:Name="toastResult"
+                Text=""
+                TextColor="Green"
+                HorizontalTextAlignment="Center"
+            />
+            <Button
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Back to Menu"
+                WidthRequest="250"
+                Clicked="OnBackClicked"
+            />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

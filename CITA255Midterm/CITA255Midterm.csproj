@@ -74,6 +74,9 @@
 	  <Compile Update="FrenchToastInfo.xaml.cs">
 	    <DependentUpon>FrenchToastInfo.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="CheckoutPage.xaml.cs">
+	    <DependentUpon>CheckoutPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="OmeletteInfo.xaml.cs">
 	    <DependentUpon>OmeletteInfo.xaml</DependentUpon>
 	  </Compile>
@@ -87,6 +90,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="FrenchToastInfo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CheckoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="OmeletteInfo.xaml">

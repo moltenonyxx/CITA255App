@@ -2,11 +2,75 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CITA255Midterm.PancakesInfo"
-             Title="PancakesInfo">
+             Title="">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid 
+            RowDefinitions="Auto, Auto, auto, auto, auto"
+            ColumnDefinitions="Auto, auto, auto"
+            Padding="10"
+            RowSpacing="5"
+            ColumnSpacing="15"
+            >
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Source="pancakes.jpg"
+                HeightRequest="150"
+                />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Pancakes"
+                Style="{StaticResource breakTitle}" 
+            />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="$4.99"
+                Style="{StaticResource breakPrice}"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Soft fluffy pancakes cooked to golden perfection, dairy and wheat and whipped cream + toppings optional"
+                Style="{StaticResource breakDesc}"
+                MinimumWidthRequest="250"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="In Stock"
+                Style="{StaticResource inStock}"
+            />
+            <Entry
+                Grid.Row="3"
+                Grid.Column="0"
+                x:Name="pancakeAmount"
+                Placeholder="Enter how much you want.."
+                MaximumWidthRequest="250"
+            />
+            <Button 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Add to Cart"
+                Clicked="pancakeCart"
+                WidthRequest="250"
+            />
+            <Label
+                Grid.Row="4"
+                Grid.Column="1"
+                x:Name="pancakeResult"
+                Text=""
+                TextColor="Green"
+                HorizontalTextAlignment="Center"
+            />
+            <Button
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Back to Menu"
+                WidthRequest="250"
+                Clicked="OnBackClicked"
+            />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

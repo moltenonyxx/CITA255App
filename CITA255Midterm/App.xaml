@@ -8,7 +8,45 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                
             </ResourceDictionary.MergedDictionaries>
+            <!--
+            <Style TargetType="Label" x:Key="shopItems">
+                <Setter Property="FontSize" Value="55"></Setter>
+                <Setter Property="TextColor" Value="Gold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            -->
+            <Style TargetType="Label" x:Key="breakTitle">
+                <Setter Property="FontSize" Value="Header"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="breakDesc">
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="TextColor" Value="Gray"></Setter>
+                <Setter Property="FontAttributes" Value="Italic"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="breakPrice">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="TextColor" Value="Gray"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="inStock">
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="TextColor" Value="Green"></Setter>
+                <Setter Property="FontAttributes" Value="Bold" ></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="outOfStock">
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="TextColor" Value="Red"></Setter>
+                <Setter Property="FontAttributes" Value="Bold" ></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -14,7 +14,12 @@
                 <CollectionView.ItemTemplate>
 
                     <DataTemplate>
-                        <Label Text="{Binding .}" FontSize="20" HorizontalTextAlignment="Center" />
+                        <Label Text="{Binding .}" 
+                               FontSize="55" 
+                               Padding="10" 
+                               TextColor="Gold"
+                               FontAttributes="Bold"
+                               />
                     </DataTemplate>
                 
                 </CollectionView.ItemTemplate>

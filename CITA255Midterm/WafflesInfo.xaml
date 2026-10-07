@@ -2,11 +2,77 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CITA255Midterm.WafflesInfo"
-             Title="WafflesInfo">
+             Title="">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid 
+            RowDefinitions="Auto, Auto, auto, auto, auto"
+            ColumnDefinitions="Auto, auto, auto"
+            Padding="10"
+            RowSpacing="5"
+            >
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Source="waffles.png"
+                HeightRequest="150"
+            />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Waffles"
+                Style="{StaticResource breakTitle}" 
+                MinimumWidthRequest="225"
+            />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="$5.99"
+                Style="{StaticResource breakPrice}"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Batter coocked to a crisp golden brown, non dairy, cinnamon, and toppings optional"
+                Style="{StaticResource breakDesc}"
+                MinimumWidthRequest="250"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="Out of Stock"
+                Style="{StaticResource outOfStock}"
+            />
+            <Entry
+                Grid.Row="3"
+                Grid.Column="0"
+                x:Name="wafflesAmount"
+                Placeholder="Enter how much you want.."
+                MaximumWidthRequest="250"
+                IsEnabled="False"
+            />
+            <Button 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Add to Cart"
+                Clicked="wafflesCart"
+                WidthRequest="250"
+                IsEnabled="False"
+            />
+            <Label
+                Grid.Row="4"
+                Grid.Column="1"
+                x:Name="wafflesResult"
+                Text=""
+                TextColor="Green"
+                HorizontalTextAlignment="Center"
+            />
+            <Button
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Back to Menu"
+                WidthRequest="250"
+                Clicked="OnBackClicked"
+            />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
