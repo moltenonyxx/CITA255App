@@ -26,7 +26,7 @@
             <Label
                 Grid.Row="1"
                 Grid.Column="1"
-                Text="$4.99"
+                Text="$5.00"
                 Style="{StaticResource breakPrice}"
             />
             <Label

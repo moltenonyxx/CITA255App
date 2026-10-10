@@ -14,7 +14,9 @@ public partial class OmeletteInfo : ContentPage
     {
         await Shell.Current.GoToAsync("..");
     }
-
+    float omelettePrice = 0;
+    double omeletteCost = 9.0;
+    string omeletteName = string.Empty;
     private void omeletteCart(object sender, EventArgs e)
     {
         try 
@@ -28,6 +30,13 @@ public partial class OmeletteInfo : ContentPage
             {
                 DisplayAlertAsync("Invalid Input", "Please enter a number", "OK");
             }
+
+            double omelettePrice = omeletteNumber * omeletteCost;
+            Order.Count.Add(omeletteNumber);
+            Order.Prices.Add(omelettePrice);
+            omeletteName = "Omelette";
+            Order.Names.Add(omeletteName);
+
         }  
         catch (ArgumentOutOfRangeException)
         {

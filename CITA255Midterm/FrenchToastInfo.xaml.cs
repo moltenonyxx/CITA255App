@@ -11,6 +11,9 @@ public partial class FrenchToastInfo : ContentPage
     {
         await Shell.Current.GoToAsync("..");
     }
+    float toastPrice = 0;
+    double toastCost = 6.0;
+    string toastName = string.Empty;
 
     private void toastCart(object sender, EventArgs e)
     {
@@ -25,6 +28,11 @@ public partial class FrenchToastInfo : ContentPage
             {
                 DisplayAlertAsync("Invalid Input", "Please enter a number", "OK");
             }
+            double toastPrice = toastNumber * toastCost;
+            Order.Count.Add(toastNumber);
+            Order.Prices.Add(toastPrice);
+            toastName = "French Toast";
+            Order.Names.Add(toastName);
         }
         catch (ArgumentOutOfRangeException)
         {

@@ -14,30 +14,46 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Text="Checkout Page"
+                Style="{StaticResource shopItems}"
                 VerticalOptions="Center" 
                 FontSize="40"
                 FontAttributes="Bold"
             />
-            <Label
-                Grid.Row="1"
-                Grid.Column="0"
-                Text="You have nothing in your cart.."
-                FontSize="20"
-                TextColor="Gray"
-            />
+            <CollectionView x:Name="CheckoutView"
+                            Grid.Row="1"
+                            Grid.Column="0">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}"
+                               Style="{StaticResource checkoutItems}"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <CollectionView.EmptyView>
+                    <Label Text="Nothing packed yet."
+                           Style="{StaticResource breakPrice}" />
+                </CollectionView.EmptyView>
+
+            </CollectionView>
 
         </Grid>
         <Label
+            x:Name="totalNum"
             Text="Total: $0.00"
+            TextColor="#eb6123"
             VerticalTextAlignment="End"
             HorizontalTextAlignment="End"
+            Padding="10"
             FontSize="20"
         />
         <Button
             Text="TOTAL"
+            BackgroundColor="CadetBlue"
             WidthRequest="150"
             HorizontalOptions="End"
-            >
-        </Button>
+            Clicked="Total"
+            />
+
     </VerticalStackLayout>
 </ContentPage>

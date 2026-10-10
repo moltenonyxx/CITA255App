@@ -11,7 +11,9 @@ public partial class PancakesInfo : ContentPage
     {
         await Shell.Current.GoToAsync("..");
     }
-
+    float pancakePrice = 0;
+    double pancakeCost = 5.0;
+    string pancakeName = string.Empty;
     private void pancakeCart(object sender, EventArgs e)
     {
         try
@@ -25,6 +27,12 @@ public partial class PancakesInfo : ContentPage
             {
                 DisplayAlertAsync("Invalid Input", "Please enter a number", "OK");
             }
+            double pancakePrice = pancakeNumber * pancakeCost;
+            Order.Count.Add(pancakeNumber);
+            Order.Prices.Add(pancakePrice);
+            pancakeName = "Pancakes";
+            Order.Names.Add(pancakeName);
+
         }
         catch (ArgumentOutOfRangeException)
         {

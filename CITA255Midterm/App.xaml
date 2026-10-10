@@ -47,6 +47,14 @@
                 <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontSize" Value="20"></Setter>
             </Style>
+            <Style TargetType="Label" x:Key="checkoutItems">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="Padding" Value="7"></Setter>
+                <Setter Property="TextColor" Value="#eb6123"></Setter>
+            </Style>
+            <Style TargetType="Button" x:Key="Buttons">
+                <Setter Property="BackgroundColor" Value="CadetBlue"></Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
