@@ -55,6 +55,7 @@
                 Text="Add to Cart"
                 Clicked="pancakeCart"
                 WidthRequest="250"
+                Style="{StaticResource Buttons}"
             />
             <Label
                 Grid.Row="4"
@@ -70,6 +71,7 @@
                 Text="Back to Menu"
                 WidthRequest="250"
                 Clicked="OnBackClicked"
+                Style="{StaticResource Buttons}"
             />
         </Grid>
     </VerticalStackLayout>
